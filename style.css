@@ -1,0 +1,13 @@
+body {
+    width: 72%;
+    margin-left: 10%;
+    background: #DEFFDE;
+    color: #000;
+}
+p#jump {
+    font-size: 256%;
+    font-weight: bold;
+}
+.copy {
+    text-align: right;
+}
