@@ -74,6 +74,10 @@ h1 {
   margin: 0;
   font-weight: 500;
 }
+h2 {
+  font-size: 108%;
+  font-weight: bold;
+}
 
 /* つまみのデザイン */
 input[type="range"] {
