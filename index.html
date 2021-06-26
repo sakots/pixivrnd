@@ -1,43 +1,66 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pixivランダムさん</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        function pixivrnd() {
-            var minid = 70300000;
-            var maxid = 91000000;
-            var artid = Math.floor( Math.random() * (maxid + 1 - minid) ) + minid ;
-            location.href = 'https://www.pixiv.net/artworks/' + artid;
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pixivランダムさん</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>pixivランダムさん</h1>
-        <hr>
-    </header>
-    <main>
-        <div>
-            <p id="jump"><a href="javascript:pixivrnd();" rel="noreferrer nofollow">跳ぶ！！</a></p>
-        </div>
-        <div>
-            <ul>
-                <li>pixivIDを持っており、かつログインしている状態である必要があります。</li>
-                <li>存在しないIDに飛んだ跳はメンゴ。</li>
-                <li>R-18に跳ぶこともあるよ。気をつけてね。</li>
-            </ul>
-        </div>
-    </main>
-    <footer>
-        <hr>
-        <div class="copy">
-            &copy; 2021 sakots <a href="https://github.com/sakots/pixivrnd">github</a><br>
-            Special thanks <a href="https://twitter.com/oca_laful">@oca_laful</a>
-        </div>
-    </footer>
+  <header>
+    <h1>pixivランダムさん</h1>
+  </header>
+  <main>
+
+    <div id="jumptable">
+      <span id="jump"><a href="javascript:pixivrnd();" rel="noreferrer nofollow">1回飛ぶ！</a></span>
+      <span id="jump"><a href="javascript:pixivrnd_10();" rel="noreferrer nofollow">10回連続で飛ぶ！</a></span>
+    </div>
+
+    <ul>
+      <li>
+        minID: <span id="current_minID_value"></span>
+        <input type="range" id="minID_range" class="input-range" min="0" max="91000000" step="1" value="70300000">
+      </li>
+      <li>
+        maxID: <span id="current_maxID_value"></span>
+        <input type="range" id="maxID_range" class="input-range" min="0" max="91000000" step="1" value="90830000">
+      </li>
+    </ul>
+
+
+    <ul class="describe">
+      <li>pixivIDを持っており、かつログインしている状態である必要があります。</li>
+      <li>既に削除されている作品や、閲覧不可な作品に飛ぶことがあります。</li>
+      <li>R-18に跳ぶこともあるよ。気をつけてね。</li>
+    </ul>
+
+    <ul class="id_to_time">
+      <li><b>IDと年月のざっくり対応表</b></li>
+      <li>0xxxxxxx: 2007年9月~</li>
+      <li>1xxxxxxx: 2010年4月~</li>
+      <li>2xxxxxxx: 2011年7月~</li>
+      <li>3xxxxxxx: 2012年9月~</li>
+      <li>4xxxxxxx: 2013年11月~</li>
+      <li>5xxxxxxx: 2015年4月~</li>
+      <li>6xxxxxxx: 2016年11月~</li>
+      <li>7xxxxxxx: 2018年8月~</li>
+      <li>8xxxxxxx: 2020年3月~</li>
+      <li>9xxxxxxx: 2021年5月~</li>
+    </ul>
+
+  </main>
+  <footer>
+    <div class="copy">
+      &copy; 2021 sakots <a href="https://github.com/sakots/pixivrnd">github</a><br>
+      Special thanks <a href="https://twitter.com/oca_laful">@oca_laful</a>
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
 </body>
+
 </html>

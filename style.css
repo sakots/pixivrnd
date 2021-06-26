@@ -1,13 +1,118 @@
-body {
-    width: 72%;
-    margin-left: 10%;
-    background: #DEFFDE;
-    color: #000;
+* {
+  font-family: 'YuGothic', '游ゴシック', 'Noto Sans JP', sans-serif;
 }
-p#jump {
-    font-size: 256%;
-    font-weight: bold;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: rgb(245, 245, 245);
+  color: #000;
+  width: 100%;
+  position: relative;
+  height: auto !important;
+  /*IE6対策*/
+  height: 100%;
+  /*IE6対策*/
+  min-height: 100%;
 }
+
+header {
+  margin: 0;
+  padding: 10px 30px;
+  color: rgb(0, 150, 250);
+  background-color: rgb(255, 255, 255);
+}
+
+footer {
+  padding: 20px 30px;
+}
+
+main {
+  width: 72%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px 50px;
+}
+
+ul {
+  padding: 1em;
+}
+
+li {
+  margin: 0.5em 0em;
+  list-style-type: none;
+}
+
+.describe {
+  text-align: center;
+}
+
+.id_to_time {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+div#jumptable {
+  padding: 2em 3em;
+  text-align: center;
+}
+
+span#jump {
+  margin: 0.5em 2em;
+  font-size: 1.5em;
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(22, 159, 201);
+}
+
+h1 {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* つまみのデザイン */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  height: 3px;
+  width: 100%;
+  background: rgb(220, 220, 220);
+  border-radius: 10px;
+  border: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: rgb(0, 150, 250);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: rgb(0, 150, 250);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+}
+
+input[type="range"]::-moz-focus-outer {
+  border: 0;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px rgba(0, 150, 250, 0.2);
+  transition: .4s;
+}
+
 .copy {
-    text-align: right;
+  text-align: right;
 }
