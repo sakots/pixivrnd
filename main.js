@@ -33,7 +33,7 @@ maxIdInput.addEventListener('input', rangeValue(maxIdInput, maxValueTarget));
 // =============================================
 
 function pixivrnd() {
-  window.open(randomURL(Number(minIdInput.value), Number(maxIdInput.value)));
+  window.open(randomURL(Number(minIdInput.value), Number(maxIdInput.value)),'_blank');
 }
 
 function pixivrnd_10() {
