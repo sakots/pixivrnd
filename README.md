@@ -6,6 +6,10 @@ pixivのランダムなページに跳ぶだけです。ただそれだけ。
 
 [http://sakots.github.io/pixivrnd](http://sakots.github.io/pixivrnd)
 
+## なんかわからんバグ
+
+- つまみを動かすと、飛ぶ。
+
 ## トリビア
 
 - 現存する最古の作品、つまり一番小さいidは、[20](https://www.pixiv.net/artworks/20)。
