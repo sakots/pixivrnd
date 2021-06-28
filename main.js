@@ -41,3 +41,8 @@ function pixivrnd_10() {
     pixivrnd();
   }
 }
+
+function pixivrnd_bg() {
+  window.open('index.html','_blank');
+  window.open(randomURL(Number(minIdInput.value), Number(maxIdInput.value)),'_self');
+}
